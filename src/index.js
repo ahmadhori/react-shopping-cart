@@ -53,3 +53,20 @@ person.walk();
 const bindedWalkFunction = person.walk.bind(person); // this is a stand alone function outside of an object
 console.log(bindedWalkFunction);
 bindedWalkFunction(); // here we get undifined because the java strict mode is enabled
+
+// normal function
+const square = function(number) {
+  return number * number;
+};
+
+// arrow function
+const squaree = number => number * number;
+console.log(squaree(5));
+
+// arrow function as a predicate
+const jobs = [
+  { id: 1, isActive: false },
+  { id: 2, isActive: true },
+  { id: 3, isActive: true }
+];
+jobs.filter(job => job.isActive).forEach(x => console.log(x.id));
