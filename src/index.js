@@ -25,7 +25,7 @@ function sayHello() {
 const person = {
   name: "Ahmad",
   walk: function() {
-    console.log("I am walking");
+    console.log(this);
   },
   talk() {
     console.log("I am talking");
@@ -40,3 +40,9 @@ console.log(person.name);
 // or using brackets
 const z = "name";
 console.log(person[z]);
+
+// testing this
+person.walk();
+const walkFunction = person.walk;
+console.log(walkFunction);
+walkFunction(); // here we get undifined because the java strict mode is enabled
