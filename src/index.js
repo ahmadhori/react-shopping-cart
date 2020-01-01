@@ -70,3 +70,19 @@ const jobs = [
   { id: 3, isActive: true }
 ];
 jobs.filter(job => job.isActive).forEach(x => console.log(x.id));
+
+// arrow and this
+const student = {
+  play() {
+    // calling this inside an arrow function
+    // ARROW FUNCTION DOESN'T REBIND THIS
+    setTimeout(() => {
+      console.log("this is", this);
+    }, 1000);
+    // calling this inside a normal callback function
+    setTimeout(function() {
+      console.log("this is", this);
+    }, 1000);
+  }
+};
+student.play();
