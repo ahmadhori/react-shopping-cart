@@ -43,6 +43,13 @@ console.log(person[z]);
 
 // testing this
 person.walk();
-const walkFunction = person.walk;
+const walkFunction = person.walk; // this is a stand alone function outside of an object
 console.log(walkFunction);
 walkFunction(); // here we get undifined because the java strict mode is enabled
+
+// in javascript es6 every function is an object
+// testing bind this
+person.walk();
+const bindedWalkFunction = person.walk.bind(person); // this is a stand alone function outside of an object
+console.log(bindedWalkFunction);
+bindedWalkFunction(); // here we get undifined because the java strict mode is enabled
