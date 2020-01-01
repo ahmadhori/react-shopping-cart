@@ -16,4 +16,7 @@ function sayHello() {
   console.log(x);
   // var is accessible in a function
   // let is accessible in a block
+
+  const i = 9;
+  // i = 10; is not possible
 }
