@@ -20,3 +20,23 @@ function sayHello() {
   const i = 9;
   // i = 10; is not possible
 }
+
+// objects
+const person = {
+  name: "Ahmad",
+  walk: function() {
+    console.log("I am walking");
+  },
+  talk() {
+    console.log("I am talking");
+  }
+};
+
+// call a method
+person.talk();
+
+// accessing properity
+console.log(person.name);
+// or using brackets
+const z = "name";
+console.log(person[z]);
