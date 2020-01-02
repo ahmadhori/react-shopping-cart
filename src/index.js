@@ -89,5 +89,9 @@ const student = {
 student.play();
 
 // Array.map
-const jobsList = jobs.map(x => <li> job </li>);
+const jobsList = jobs.map(x => (
+  <li>
+    id is {x.id} and active status is {x.isActive.toString()}
+  </li>
+));
 render(jobsList);
