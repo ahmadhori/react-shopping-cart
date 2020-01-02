@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { render } from "@testing-library/react";
 
 const element = <h1>Hello World again</h1>;
 console.log(element);
@@ -86,3 +87,7 @@ const student = {
   }
 };
 student.play();
+
+// Array.map
+const jobsList = jobs.map(x => <li> job </li>);
+render(jobsList);
