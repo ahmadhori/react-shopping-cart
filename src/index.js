@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { render } from "@testing-library/react";
+import { employee } from "./employee";
 
 const element = <h1>Hello World again</h1>;
 console.log(element);
@@ -79,19 +80,23 @@ const student = {
     // ARROW FUNCTION DOESN'T REBIND THIS
     setTimeout(() => {
       console.log("this is", this);
-    }, 1000);
+    }, 10);
     // calling this inside a normal callback function
     setTimeout(function() {
       console.log("this is", this);
-    }, 1000);
+    }, 10);
   }
 };
 student.play();
 
 // Array.map
 const jobsList = jobs.map(x => (
-  <li>
+  <li key={x.id}>
     id is {x.id} and active status is {x.isActive.toString()}
   </li>
 ));
 render(jobsList);
+
+// emloyee is imported from another file (module)
+var ss = new employee("Ahmad");
+console.log(ss.name);
